@@ -1,0 +1,27 @@
+---
+import BackendLayout from '@/layouts/backendLayout.astro'
+import fs from 'fs'
+const blogPath="src/content/posts"
+const projectPath="src/content/projects"
+// 统计blogPath路径下.md文件个数
+const blogCount = fs.readdirSync(blogPath).filter(file => file.endsWith('.md')).length
+// 统计projectPath路径下.md文件个数
+const projectCount = fs.readdirSync(projectPath).filter(file => file.endsWith('.yaml')).length
+---
+
+<BackendLayout>
+  <div class="p-2">
+    <header class="flex justify-between px-6">
+      <h1 class="text-3xl font-bold">仪表盘</h1>
+      <div class="flex items-center">
+        <span class="px-4 py-2 bg-primary text-white rounded-md">文章数量：{blogCount}</span>
+      </div>
+      <div class="flex items-center">
+        <span class="px-4 py-2 bg-primary text-white rounded-md">项目数量：{projectCount}</span>
+      </div>
+      <div class="flex items-center">
+        <button class="px-4 py-2 bg-primary text-white rounded-md">创建文章</button>
+      </div>
+    </header>
+  </div>
+</BackendLayout>

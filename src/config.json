@@ -9,35 +9,35 @@
     "appleTouchIcon": "/apple-touch-icon.png"
   },
   "author": {
-    "name": "lxchapu",
-    "twitterId": "@lxchapu",
-    "avatar": "https://s2.loli.net/2024/04/30/ozsnuS5Ihf3xMBG.webp"
+    "name": "Unichen",
+    "twitterId": "@Unichen",
+    "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJUdtzUCXRy0upaFgmD6p_TBeuurnghKNYniovh1Q7-tcq3qCE=s288-c-no"
   },
   "hero": {
-    "name": "Gyoza",
-    "bio": "A static blog template build with Astro and React.",
-    "description": "Clean, Cute, Fast.",
+    "name": "Unichen",
+    "bio": "这是一个每天都会变化的slogan",
+    "description": "我是一个在校代码学习者，玩过 Vue、React、Astro 等框架，喜欢探索新的技术。",
     "socials": [
       {
         "name": "Github",
         "icon": "icon-github",
-        "url": "https://github.com/lxchapu/astro-gyoza",
+        "url": "",
         "color": "rgb(24, 23, 23)"
       },
       {
         "name": "X",
         "icon": "icon-x",
-        "url": "https://twitter.com/lxchapu",
+        "url": "https://twitter.com/ChenUnic70912",
         "color": "rgb(36, 46, 54)"
       },
       {
         "name": "Email",
         "icon": "icon-mail",
-        "url": "mailto:lxchapu@outlook.com",
+        "url": "unicchen99@gmail.com",
         "color": "rgb(212, 70, 56)"
       }
     ],
-    "yiyan": "当第一颗卫星飞向大气层外，我们便以为自己终有一日会征服宇宙。"
+    "yiyan": "不积跬步，无以至千里；不积小流，无以成江海。"
   },
   "color": {
     "accent": [
