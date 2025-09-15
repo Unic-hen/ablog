@@ -1,4 +1,5 @@
 ---
+import CreateArticleButton from '@/components/ui/createArticle'
 import BackendLayout from '@/layouts/backendLayout.astro'
 import fs from 'fs'
 const blogPath="src/content/posts"
@@ -7,6 +8,8 @@ const projectPath="src/content/projects"
 const blogCount = fs.readdirSync(blogPath).filter(file => file.endsWith('.md')).length
 // 统计projectPath路径下.md文件个数
 const projectCount = fs.readdirSync(projectPath).filter(file => file.endsWith('.yaml')).length
+// 获取blogPath路径下所有文件名称
+const blogNames = fs.readdirSync(blogPath).filter(file => file.endsWith('.md'))
 ---
 
 <BackendLayout>
@@ -20,7 +23,7 @@ const projectCount = fs.readdirSync(projectPath).filter(file => file.endsWith('.
         <span class="px-4 py-2 bg-primary text-white rounded-md">项目数量：{projectCount}</span>
       </div>
       <div class="flex items-center">
-        <button class="px-4 py-2 bg-primary text-white rounded-md">创建文章</button>
+        <CreateArticleButton docNames={blogNames} client:only="react"/>
       </div>
     </header>
   </div>

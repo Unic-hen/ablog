@@ -14,6 +14,8 @@ const itemVariants = {
 }
 
 export function SocialList({ className }: { className?: string }) {
+  
+
   return (
     <motion.ul
       className={clsx(
