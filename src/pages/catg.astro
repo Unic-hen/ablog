@@ -1,0 +1,9 @@
+---
+import CatgTalk from '@/components/catgtalk/index.tsx';
+import BackendLayout from '@/layouts/backendLayout.astro';
+---
+<BackendLayout>
+  <div class="container mx-auto p-4 h-screen">
+    <CatgTalk client:load />
+  </div>
+</BackendLayout>

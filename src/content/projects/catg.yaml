@@ -1,0 +1,4 @@
+title: catg
+description: catg是一个使用qwen3-4b进行Lora微调训练出来的模型，借助Maas平台提供服务，目前仅支持文字对话，训练集采用知乎博主rag找猫娘的项目训练集。
+link: https://ablog.vercel.app/catg
+image: https://lh3.googleusercontent.com/a/ACg8ocJUdtzUCXRy0upaFgmD6p_TBeuurnghKNYniovh1Q7-tcq3qCE=s288-c-no

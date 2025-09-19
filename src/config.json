@@ -115,5 +115,9 @@
     "microsoftClarity": {
       "projectId": ""
     }
+  },
+  "llm": {
+    "api_key": "sk-gsfR78kdwztOan1DA1177412062a4c9fBcC67b76F2FbC055",
+    "api_base": "http://maas-api.cn-huabei-1.xf-yun.com/v1"
   }
 }
