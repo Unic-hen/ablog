@@ -28,7 +28,7 @@ export default function CatgTalk() {
     if (sessionId) {
       const fetchHistory = async () => {
         try {
-          const response = await fetch(`http://47.109.106.81:5000/history/${sessionId}`)
+          const response = await fetch(`https://47.109.106.81:5000/history/${sessionId}`)
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`)
           }
@@ -59,7 +59,7 @@ export default function CatgTalk() {
         ? { session_id: sessionId, message: prompt }
         : { message: prompt }
 
-      const response = await fetch('http://47.109.106.81:5000/chat', {
+      const response = await fetch('https://47.109.106.81:5000/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
