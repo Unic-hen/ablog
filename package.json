@@ -8,7 +8,7 @@
     "dev:frontend": "astro dev",
     "dev": "run-p dev:backend dev:frontend",
     "build": "astro check && astro build && pagefind --site dist",
-    "preview:backend": "node backend/app.js",
+    "preview:backend": "node backend/app.js -h 0.0.0.0 -p 5000",
     "preview:frontend": "astro preview",
     "preview": "npm-run-all --parallel preview:backend preview:frontend",
     "astro": "astro",
