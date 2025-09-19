@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 // const baseUrl = 'https://47.109.106.81:5000';
-const baseUrl = 'http://127.0.0.1:5000/api'
+const baseUrl = 'https://ablog.vercel.app:5000/api'
 interface Message {
   id: string
   content: string
