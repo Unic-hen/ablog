@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
-
+// const baseUrl = 'https://47.109.106.81:5000';
+const baseUrl = 'http://localhost:5000/api'
 interface Message {
   id: string
   content: string
@@ -28,7 +29,7 @@ export default function CatgTalk() {
     if (sessionId) {
       const fetchHistory = async () => {
         try {
-          const response = await fetch(`https://47.109.106.81:5000/history/${sessionId}`)
+          const response = await fetch(`${baseUrl}/history/${sessionId}`)
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`)
           }
@@ -53,13 +54,11 @@ export default function CatgTalk() {
   }, [sessionId])
 
   // 调用新的对话接口
-  const callChatApi = async (prompt: string): Promise<string> => {
+  const callChatApi = async (message: string): Promise<string> => {
     try {
-      const requestBody = sessionId
-        ? { session_id: sessionId, message: prompt }
-        : { message: prompt }
+      const requestBody = sessionId ? { session_id: sessionId, message } : { message }
 
-      const response = await fetch('https://47.109.106.81:5000/chat', {
+      const response = await fetch(`${baseUrl}/chat`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -75,8 +74,8 @@ export default function CatgTalk() {
       if (!sessionId && data.session_id) {
         setSessionId(data.session_id)
       }
-      console.log(data.response)
-      return data.response
+      console.log(data.result)
+      return data.result
     } catch (error) {
       console.error(`Error: ${error}`)
       throw error

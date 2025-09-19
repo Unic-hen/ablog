@@ -1,12 +1,16 @@
 {
-  "name": "astro-gyoza",
+  "name": "ablog",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
     "prepare": "pnpm exec simple-git-hooks",
-    "dev": "astro dev",
+    "dev:backend": "node backend/app.js",
+    "dev:frontend": "astro dev",
+    "dev": "run-p dev:backend dev:frontend",
     "build": "astro check && astro build && pagefind --site dist",
-    "preview": "astro preview",
+    "preview:backend": "node backend/app.js",
+    "preview:frontend": "astro preview",
+    "preview": "npm-run-all --parallel preview:backend preview:frontend",
     "astro": "astro",
     "lint": "prettier --write .",
     "new-friend": "node scripts/new-friend.js",
@@ -57,6 +61,7 @@
     "@inquirer/prompts": "^5.0.2",
     "lint-staged": "^15.2.2",
     "micromark-util-symbol": "^2.0.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0",
     "simple-git-hooks": "^2.11.1"
